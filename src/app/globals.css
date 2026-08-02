@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animated";
+
+@layer 
+base
+ {
+  *, *::before, *::after {
+    
+box-sizing
+: border-box;
+  }
+
+  * {
+    
+margin
+: 0;
+    
+padding
+: 0;
+    
+box-sizing
+: border-box;
+  }
+
+  html {
+    
+font-family
+: sans-serif;
+
+  }
+}
+
+@layer components {
+ 
+  .btn-primary {
+    
+   @apply flex h-11 items-center gap-6 rounded-lg bg-brand px-4 py-2.5 text-[11px] text-white cursor-pointer 
+           hover:bg-brand-gradient 
+           sm-mobile-max:w-full 
+           laptop-max:h-14 laptop-max:px-6 laptop-max:py-4 laptop-max:text-[16px];
+
+  }
+}
+
+@theme {
+
+  --color-brand: #DC2626;
+  --color-brand-gradient: #B91C1C;
+  --color-dark: #374151;
+  --color-dark-gradient: #111827;
+  --color-background: #F3F4F6;
+  --color-text: #4C5759;
+  --color-text-secondary: #636E70;
+  --color-accent-yellow: #FADB38;
+
+  /* breakpoints */
+
+  --breakpoint-*: initial;
+  --breakpoint-sm-mobile-max: 22.5rem;
+  --breakpoint-laptop-max: 64rem;
+  
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
