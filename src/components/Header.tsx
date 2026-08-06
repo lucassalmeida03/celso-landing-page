@@ -24,18 +24,16 @@ export function Header() {
         aria-label="Navegação principal"
         className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 laptop-max:px-10 py-3"
       >
-    
         <Link href="#inicio">
           <Image src={logo} alt="Celso" width={120} height={40} priority />
         </Link>
 
-       
         <ul className="hidden items-center gap-10 bg-white px-4 py-2 text-black laptop-max:flex">
           {NAV_ITEMS.map((item) => (
             <li key={item.href}>
               <Link
                 href={item.href}
-                className="block text-base font-medium transition-colors hover:text-brand"
+                className="block text-base font-medium transition-colors hover:text-brand hover:underline"
               >
                 {item.label}
               </Link>
@@ -46,7 +44,7 @@ export function Header() {
         <div className="flex items-center gap-4">
           <button
             type="button"
-            aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
+            aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
             className="cursor-pointer p-1 text-black hover:text-brand laptop-max:hidden"
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -60,7 +58,7 @@ export function Header() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+                d={isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
               />
             </svg>
           </button>

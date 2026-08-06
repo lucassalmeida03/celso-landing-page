@@ -1,10 +1,10 @@
 import Link from 'next/link'
 
 type Props = {
-  isOpen: boolean;
+  isOpen: boolean
 }
 
-export function MenuHamburguer({isOpen}: Props) {
+export function MenuHamburguer({ isOpen }: Props) {
   const NAV_ITEMS = [
     { label: 'Sobre', href: '#sobre' },
     { label: 'Serviços', href: '#servicos' },
